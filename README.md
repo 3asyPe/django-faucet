@@ -41,7 +41,12 @@ The Django application will be available at http://localhost:8000.
 
 ## API Endpoints
 - Fund API: ```POST /fund```
+
+    Send funds to destination wallet. You can send once per minute at max from 1 ip address and/or to 1 destination wallet
+
   - Request body: ```{ "wallet_address": "your_wallet_address" }```
   - Response: ```{ "transaction_id": "transaction_id" }```
 - Stats API: ```GET /stats```
+    
+    Get count of successful and failed transactions for past 24 hours. Updates every minute using celery task by checking status of all written but not yet processed transactions on blockchain
   - Response: ```{ "successful_transactions": count, "failed_transactions": count }```
