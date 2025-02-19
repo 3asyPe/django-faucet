@@ -1,6 +1,6 @@
 # Django Faucet
 
-This project is a Django-based faucet application that allows users to request funds to be sent to their Ethereum wallet addresses. The application uses Celery for background tasks and Redis as the message broker.
+This project is a Django-based faucet application that allows users to request Sepolia funds to be sent to their EVM wallet addresses. The application uses Celery for background tasks and Redis as the message broker.
 
 ## Features
 
